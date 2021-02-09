@@ -5,9 +5,7 @@ import "./App.css";
 function App() {
   return (
     <React.Fragment>
-      <div className="container">
         <Weather/>
-      </div>
     </React.Fragment>
   );
 }

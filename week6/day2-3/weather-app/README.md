@@ -3,4 +3,7 @@ Weater App
 
 ```
 npm i && npm start
+Pleas Allow location
 ```
+
+

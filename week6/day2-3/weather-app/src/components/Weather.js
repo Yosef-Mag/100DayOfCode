@@ -1,7 +1,10 @@
 import React, {useState, useEffect, useRef} from "react";
 import apiKeys from "./apiKeys";
 import Clock from "react-live-clock";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 import loader from "./images/WeatherIcons.gif";
+
 const dateBuilder = (d) => {
   let months = [
     "January",
@@ -41,7 +44,7 @@ function Weather() {
 let isRendered = useRef(false);
 const [lat, setLat] = useState();
 const [lon, setLon] = useState();
-const [unit, setUnit] = useState(false)
+const [unit, setUnit] = useState(true)
 const [temperatureC, setTemperatureC] = useState();
 const [temperatureCMax, setTemperatureCMax] = useState();
 const [temperatureCMin, setTemperatureCMin] = useState();
@@ -106,13 +109,13 @@ const getWeather = async (lat, lon) => {
 
 
   return (
-    <div>
+    <div className="container ">
       {isRendered ?   
              <React.Fragment>
              <div className="city">
                <div className="title">
-              <h2>{city}</h2>
-                <h3>{country}</h3>
+              <h2>{city}, {country}</h2>
+              <h3></h3>
              </div>
                 <div className="date-time">
                <div id="txt"></div>
@@ -121,28 +124,34 @@ const getWeather = async (lat, lon) => {
                    </div>
                  <div className="current-date">{dateBuilder(new Date())}</div>
                 </div>
-                {unit ? <div className="temperatureC">
-                   <p>
+                {unit ? <div className="temperature">
+                   <p className="temperatureC">
                   <span>Current:</span> {temperatureF}°<span>C</span>
                    </p>
-                   <p>
-                   <span>Max:</span> {temperatureFMax}°<span>C</span>
+                   <p className="temperatureC">
+                   <span >Max:</span> {temperatureFMax}°<span>C</span>
                    </p>
-                   <p>
-                   <span>Min:</span> {temperatureFMin}°<span>C</span>
+                   <p className="temperatureC"> 
+                   <span >Min:</span> {temperatureFMin}°<span>C</span>
                    </p>
-                  </div> : <div className="temperatureC">
-                   <p>
+                  </div> : <div className="temperature">
+                   <p className="temperatureF">
                   <span>Current:</span> {temperatureC}°<span>F</span>
                    </p>
-                   <p>
+                   <p className="temperatureF">
                    <span>Max:</span> {temperatureCMax}°<span>F</span>
                    </p>
-                   <p>
+                   <p className="temperatureF">
                    <span>Min:</span> {temperatureCMin}°<span>F</span>
                    </p>
                   </div>}
-                 <button onClick={() => setUnit(() => !unit)}>Changeing Temperature</button>
+                  <FormControlLabel
+                    style={{color: '#fff', justifySelf: "end"}}
+                    control={<Switch  onChange={() => setUnit(() => !unit)} />}
+                    label="Normal"
+                    label="C/F"
+                    labelPlacement="top"
+                  />
                 </div>
             </React.Fragment> :
               <React.Fragment>
