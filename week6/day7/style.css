@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #3F2F3A;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 8%;
+    width: 600px;
+    height: 400px;
+  }
+  
+  /* Cup */
+  .cup {
+    position: absolute;
+    border-radius: 0 0 25px 25px;
+    width: 40%;
+    height: 70%;
+    top: 12.5%;
+    left: 25%;
+    border: 5px solid rgba(255, 255, 255, 0.06);
+    border-top: none;
+    border-bottom: 15px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Liquid */
+  .cup-liquid {
+    position: absolute;
+    position: relative;
+    background: #f17b3f;
+    box-shadow: inset 0 0 50px rgba(0,0,0, .5);
+    transition: 0.5s;
+    border-radius: 0 0 5% 5%;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+  }
+  
+  .cup-liquid:before,
+  .cup-liquid:after {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    background: #000;
+  }
+  
+  .cup-liquid:before {
+    border-radius: 45%;
+    background: rgba(255,255,255,1);
+    background: rgba(63, 47, 58, 1);
+    animation: animated-juice 5s linear infinite;
+  }
+  
+  .cup-liquid:after {
+    border-radius: 40%;
+    background: rgba(255,255,255, .5);
+    background: rgba(63, 47, 58, .5);
+    animation: animated-juice 10s linear infinite;
+  }
+  
+  @keyframes animated-juice {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+
+  p {
+    border-right: 2px solid #fff;
+    white-space: nowrap; /* keep text in one line */
+    overflow: hidden; /* hide text behind the cursor */
+    margin: 0 auto;
+    font-family: "Major Mono Display", monospace;
+    font-size: 2rem;
+    color: #f17b3f;
+    margin-top: 15%;
+    /* define animation types for text + cursor */
+    animation: animated-text 6s steps(30, end) 1s 1 normal both,
+      animated-cursor 900ms steps(30, end) infinite;
+  }
+  
+  /* the cursor, blinking animation */
+  
+  @keyframes animated-cursor {
+    from {
+      border-right-color: rgba(255, 255, 255, 0.8);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+  
+  /* the text, movement */
+  
+  @keyframes animated-text {
+    from {
+      width: 0;
+    }
+    to {
+      width: 46rem;
+    }
+  }
