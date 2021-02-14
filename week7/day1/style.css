@@ -1,0 +1,268 @@
+  body {
+    background-color: skyblue; 
+    height:100%;
+    overflow: hidden;
+   }
+   
+   .outer-container {
+     position: absolute;
+     margin: auto;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     width: 300px;
+     height:300px;
+   }
+   
+   .snowman-container { 
+    position: relative;
+    width: 300px;
+    height: 300px;
+   }
+   
+   .hat-top {
+     width: 50px;
+     height: 50px;
+     top: -40px;
+     left: 125px;
+     position: absolute;
+     background-color: black;
+     animation: hat-top  4s ease-out forwards;
+     display: inline-block;
+   }
+   
+     @keyframes hat-top {
+     from {top: -40px;} 
+     to {top: 60px;}
+     }
+   
+   .hat-brim {
+     width: 70px;
+     height: 10px;
+     position: absolute;
+     background-color: black;
+     top: 0px;
+     left: 115px;
+     animation: hat-brim 4s ease-out forwards;
+   }
+   
+     @keyframes hat-brim {
+     from {top: 0px;} 
+     to {top: 100px;}
+     }
+   
+     .snowmans-head {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background-color: white;
+     position: relative;
+     top: 50px;
+     left: 125px;
+     animation: snowmans-head 4s ease-out forwards;
+    }
+       
+       @keyframes snowmans-head {
+         from {top: 50px;} 
+         to {top: 100px;} 
+       }
+   
+   .eye1 {
+     width: 5px;
+     height:5px;
+     border-radius: 50%;
+     background-color: black;
+     position: absolute;
+     top: 60px;
+     left: 195px;
+     animation: eye1 4s ease-out forwards;
+   }
+   
+   @keyframes eye1 {
+     from {top: 60px; left: 95px;} 
+     to {top:115px; left: 145px;}
+    }
+   
+   .eye2 {
+     width: 5px;
+     height:5px;
+     border-radius: 50%;
+     background-color: black;
+     position: absolute;
+     top: 60px;
+     left: 210px;
+     animation: eye2 4s ease-out forwards;
+   }
+   
+   @keyframes eye2 {
+     from { top: 60px; left: 210px ;} 
+     to { top: 115px; left: 160px ;}
+    }
+   
+   .carrot {
+     position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 6px solid transparent;
+      border-left: 25px solid #ff6600;
+      border-bottom: 6px solid transparent;
+      top: 90px;
+      left: 250px;
+      animation:carrot 4s ease-out forwards;
+   }
+   
+   @keyframes carrot { 
+     from {top: 90px; left: 250px;} 
+     to {top: 120px; left: 154px;}
+    }
+   
+   .snowmans-torso {
+     width: 75px;
+     height: 75px;
+     border-radius: 50%;
+     background-color: white;
+     position: absolute;
+     top: 140px;
+     left:113px;
+   }
+   
+   .left-arm {
+     width: 50px;
+     height: 5px;
+     background-color: #331a00;
+     left: -10px;
+     top:150px;
+     transform: rotate(20deg);
+     position: absolute;
+     animation: left-arm 4s ease-out forwards;
+   }
+   
+   @keyframes left-arm {
+     from {left: -10px;} 
+     to { left: 69px }
+   }
+   
+   .right-arm {
+     width: 50px;
+     height: 5px;
+     background-color: #331a00;
+     left: 250px;
+     top:150px;
+     transform: rotate(160deg);
+     position: absolute;
+     animation: right-arm 4s ease-out forwards;
+   }
+   
+   @keyframes right-arm { 
+     from {left: 250px} 
+     to {left: 182px;}
+    }
+   
+   .finger1 {
+     width: 20px;
+     height: 3px;
+     background-color: #331a00;
+     position: absolute;
+     transform: rotate(70deg);
+     top: 135px;
+     left:-20px;
+     animation: finger1 4s ease-out forwards;
+   }
+   
+   @keyframes finger1 { 
+     from {left: -20px;} 
+     to {left: 59px;} 
+    }
+   
+   .finger2 {
+     width: 20px;
+     height: 3px;
+     background-color: #331a00;
+     position: absolute;
+     transform: rotate(20deg);
+     top: 141px;
+     left: -26px;
+     animation: finger2 4s ease-out forwards;
+   }
+   
+   @keyframes finger2 { 
+     from {left: -26px;} 
+     to {left: 53px;} 
+    }
+   
+   .finger3 {
+     width: 20px;
+     height: 3px;
+     background-color: #331a00;
+     position: absolute;
+     transform: rotate(-30deg);
+     top: 147px;
+     left: -26px;
+     animation: finger3 4s ease-out forwards;
+   }
+   
+   @keyframes finger3 { from {left: -26px;} to {left: 53px;} }
+   
+   .finger4 {
+     width: 20px;
+     height: 3px;
+     background-color: #331a00;
+     position: absolute;
+     transform: rotate(110deg);
+     top: 135px;
+     left: 290px;
+     animation: finger4 4s ease-out forwards;
+   }
+   
+   @keyframes finger4 { 
+     from {left: 290px;} 
+     to {left: 222px;} 
+    }
+   
+   .finger5 {
+     width: 20px;
+     height: 3px;
+     background-color: #331a00;
+     position: absolute;
+     transform: rotate(160deg);
+     top: 141px;
+     left: 296px;
+     animation: finger5 4s ease-out forwards;
+   }
+   
+   @keyframes finger5 { 
+     from {left: 296px;} 
+     to {left:228px;} 
+    }
+   
+   .finger6 {
+     width: 20px;
+     height: 3px;
+     background-color: #331a00;
+     position: absolute;
+     transform: rotate(210deg);
+     top: 147px;
+     left: 296px;
+     animation: finger6 4s ease-out forwards;
+   }
+   @keyframes finger6 { 
+     from {left: 296px;} 
+     to {left: 228px;} 
+    }
+   
+   .snowmans-feet {
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     background-color: white;
+     position: absolute;
+     top: 250px;
+     left: 100px;
+     animation: snowmans-feet 4s ease-out forwards;
+   }
+   
+   @keyframes snowmans-feet {
+     from {top: 250px;} 
+     to {top: 190px;}
+   }
