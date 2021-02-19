@@ -1,0 +1,134 @@
+body {
+  background: linear-gradient(130deg, #0479c3 0%, #00d4ff 50%, #0485cb 100%);
+  overflow: hidden;
+
+}
+
+.traffic-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.traffic-light__pole {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  background: linear-gradient(-90deg, #2f2f2f 0%, #020202 100%);
+  transform: translateX(-50%);
+  height: 80vh;
+  width: 40px;
+}
+
+.traffic-light__case {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(-90deg, #2f2f2f 0%, #020202 100%);
+  border: 10px solid #efefef;
+  border-radius: 14px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.traffic-light__case:before {
+  content: "";
+}
+
+.light {
+  border-radius: 50%;
+  margin-top: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.light:first-child {
+  margin-top: 0;
+}
+
+.light.red {
+  animation: switchOnLight-red 10s infinite;
+  background: red;
+  box-shadow: 0px 0px 30px 0px #fe0000;
+}
+
+.light.yellow {
+  animation: switchOnLight-yellow 10s infinite;
+  background: #FFC326;
+  box-shadow: 0px 0px 30px 0px #ffd800;
+}
+
+.light.green {
+  animation: switchOnLight-green 10s infinite;
+  background: green;
+  box-shadow: 0px 0px 30px 0px #24be00;
+}
+
+@keyframes switchOnLight-red {
+  0% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes switchOnLight-yellow {
+  0% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.2;
+  }
+  85% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes switchOnLight-green {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
