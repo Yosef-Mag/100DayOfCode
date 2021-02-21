@@ -1,0 +1,89 @@
+body {
+  background: #4B79A1;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #283E51, #0A2342);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #283E51, #0A2342); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -olinear-gradient(to top, #283E51, #0A2342); 
+  }
+  
+  .moon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -90px;
+    margin-top: -100px;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 30px 16px 0 0 #F5F3CE;
+    animation-duration: 12s;
+    animation-name: hover;
+    animation-iteration-count: infinite;
+    z-index: 0;
+  }
+  
+  .cloud {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: rgba(255,255,255,1);
+    border-radius: 50% 50% 36px 36px;
+    width: 120px;
+    height: 100px;
+  }
+  .c1 {
+    animation-duration: 6s;
+    animation-name: c1;
+    animation-iteration-count: infinite;
+    margin-top: 20px;
+    box-shadow: 40px 8px 0 -8px rgba(255,255,255,1);
+  }
+  .c2 {
+    animation-duration: 10s;
+    animation-name: c2;
+    animation-iteration-count: infinite;
+    margin-top: 10px;
+    box-shadow: -40px 10px 0 -10px rgba(255,255,255,1);
+  }
+  
+  @keyframes hover {
+    0% {
+      transform: translate(0, 5px);
+    }
+    25% {
+       transform: translate(0, 10px);
+    }
+    50% {
+      transform: translate(0, 0px);
+    }
+    75% {
+      transform: translate(0, 10px);
+    }
+    100% {
+      transform: translate(0, 5px);
+    }
+  }
+  
+  @keyframes c1 {
+    0% {
+      margin-left: -120px;
+    }
+    50% {
+      margin-left: -130px;
+    }
+    100% {
+      margin-left: -120px;
+    }
+  }
+  
+  @keyframes c2 {
+    0% {
+      margin-left: 40px;
+    }
+    50% {
+      margin-left: 15px;
+    }
+    100% {
+      margin-left: 40px;
+    }
+  }
