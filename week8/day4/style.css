@@ -1,0 +1,136 @@
+body {
+  margin:0px;
+  padding:0px;
+  background-color: lightblue;
+  overflow-y: hidden;
+}
+.main{
+  transform:translate (-50%,-50%);
+  position: absolute;
+  top: 40%;
+  right: 90%;
+}
+.cir{
+  position:absolute;
+  height:50px;
+  width:50px;
+  top:0px;
+  left:153px;
+  background-color:white;
+  border-radius:50%;
+  animation:up 1.5s infinite ;
+  transition:0.5s;
+}
+@keyframes up{
+ 50%{
+      transform:translateY(10px) ;
+  }
+}
+.body2{
+  position:absolute ;
+  top:50px;
+  left:-50px;
+  width:55px;
+  height:100px;
+  background-color:white;
+  border-radius: 700px 50px 10px 10px;
+  transform:skew(-5deg);
+}
+.foot1{
+  position:absolute ;
+  top:210px;
+  left:90px;
+  width:30px;
+  height:15px;
+  background-color:white;
+  border-radius:20px 20px 10px 10px;
+  transform:skew(5deg);
+  z-index:1;
+  animation:cc 1.5s infinite;
+  transition:0.6s ;
+}
+@keyframes cc {
+  40%{
+      left:150px;
+      transform:rotate(35deg);
+      top:203px;
+  }
+  50%{
+      transform:rotate(-20deg);
+      top:205px;
+      
+  }
+  90%{
+      left:90px;
+      transform:rotate(0deg);
+  }
+}
+.foot1::after{
+  content:"";
+  position:absolute ;
+  top:-5px;
+  right:0px;
+  left:-5px;
+  width:130%;
+  height:10px;
+  background-color: lightblue;
+  transform:rotate(3deg);
+  border-radius:30px;
+}
+.foot2{
+  position:absolute ;
+  top:210px;
+  left:150px;
+  width:30px;
+  height:15px;
+  background-color:white;
+  border-radius:20px 20px 10px 10px;
+  transform:skew(5deg);
+  transition:0.6s;
+  animation:bb 1.5s infinite ;
+}
+@keyframes bb{
+  40%{
+      left:90px;
+      transform:rotate(35deg);
+      top:203px;
+  }
+  50%{
+      transform:rotate(-20deg);
+      top:205px;
+      
+  }
+  90%{
+      left:150px;
+      transform:rotate(0deg);
+  }
+}
+.foot2::after{
+  content:"";
+  position:absolute ;
+  top:-5px;
+  right:0px;
+  left:-5px;
+  width:130%;
+  height:10px;
+  background-color: lightblue;
+  transform:rotate(3deg);
+  border-radius:30px;
+}
+.cir2{
+  position:absolute ;
+  top:220px;
+  left:80px;
+  width:110px;
+  height:10px;
+  border-radius:50%;
+  background-color:grey;
+  z-index:-1;
+  opacity:0.2;
+  animation:mm 1.5s infinite ;
+}
+@keyframes mm{
+  50%{
+      transform:scale(1.2);
+  }
+}
