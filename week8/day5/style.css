@@ -1,0 +1,71 @@
+body {
+  background-color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.toon {
+  float: left;
+}
+.toon__eye {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 200px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 200px;
+}
+.toon__eye--pupil {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 100px;
+  animation-name: pupilAnim;
+  animation-duration: 2.95s;
+  animation-iteration-count: infinite;
+}
+.toon__eye--pupil--lightOne {
+  position: relative;
+  width: 20px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  left: 10px;
+  top: 10px;
+}
+.toon__eye--pupil--lightTwo {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  left: 15px;
+  top: 15px;
+}
+@keyframes pupilAnim {
+  0% {
+    bottom: -90px;
+    left: 0px;
+  }
+  25% {
+    bottom: 0px;
+    left: 40px;
+  }
+  50% {
+    bottom: 90px;
+    left: 0px;
+  }
+  75% {
+    bottom: 0px;
+    left: -40px;
+  }
+  100% {
+    bottom: -90px;
+    left: 0px;
+  }
+}
