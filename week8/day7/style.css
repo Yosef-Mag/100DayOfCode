@@ -1,0 +1,134 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #948b89;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  background-color: #f2e9e4;
+  box-shadow: 0px 0px 30px -5px #27213c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.floor {
+  width: 400px;
+  height: 70px;
+  background-color: #9a8c98;
+  align-self: flex-end;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 33% 33% 33%;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.ball {
+  width: 70px;
+  height: 70px;
+  align-self: flex-end;
+  border-radius: 100px;
+  z-index: 2;
+  transform: translateY(-50px);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#ball1 {
+  background-color: #93b1a7;
+  animation: bounce 700ms infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+  animation-delay: 500ms;
+}
+
+#ball2 {
+  background-color: #56a3a6;
+  animation: bounce 700ms infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+
+#ball3 {
+  background-color: #3a606e;
+  animation: bounce 700ms infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+  animation-delay: 300ms;
+}
+
+.shadow {
+  background-color: grey;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  opacity: 0.7;
+  animation: shadow 700ms infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+
+#shadow1 {
+  margin-left: 30px;
+  animation-delay: 500ms;
+}
+
+#shadow3 {
+  margin-right: 25px;
+  animation-delay: 300ms;
+}
+
+@keyframes shadow {
+  0% {
+    width: 10px;
+    height: 10px;
+  }
+  25% {
+    width: 30px;
+    height: 12px;
+  }
+  50% {
+    width: 60px;
+    height: 17px;
+  }
+  75% {
+    width: 70px;
+    height: 20px;
+  }
+  100% {
+    width: 80px;
+    height: 27px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-50px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(50px);
+  }
+  60% {
+    transform: translateY(100px);
+    width: 80px;
+    height: 60px;
+  }
+  80% {
+    transform: translateY(150px);
+    width: 85px;
+    height: 55px;
+  }
+  100% {
+    transform: translateY(185px);
+    width: 90px;
+    height: 50px;
+  }
+}
