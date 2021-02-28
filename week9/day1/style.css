@@ -1,0 +1,48 @@
+body {
+	background: lightblue;
+}
+
+.photo {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+  transform: translate(-50%, -50%);
+	width: 250px;
+	height: 250px;
+	border: solid #F8F4EF;
+	border-width: 1.25em 1.25em 5em;
+	background: #3B373A;
+	box-shadow: 1px 1px 8px -2px rgba(0,0,0,0.75);
+}
+
+.note {
+	position: absolute;
+	font-family: 'Just Another Hand', cursive;
+	font-size: 1.5rem;
+	transform: rotate(-10deg);
+	left: 1.35em;
+	top:11.3em;
+}
+
+img {
+	opacity: 0;
+}
+
+img:hover {
+	animation: develop 10s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes develop {
+  0% { opacity: 0; }
+  10% { opacity: 0.05; }
+  20% { opacity: 0.1; }
+	30% { opacity: 0.17; }
+	40% { opacity: 0.2; }
+	50% { opacity: 0.3; }
+	60% { opacity: 0.4; }
+	70% { opacity: 0.5; }
+	80% { opacity: 0.6; }
+	90% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
