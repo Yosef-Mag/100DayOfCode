@@ -1,0 +1,68 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: 'Open sans', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background: #1F8EE7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    animation: appear 4s 1s forwards ease-in-out;
+    z-index: 0;
+}
+h1 {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(-25%);
+    font-size: 60px;
+    z-index: 1;
+    animation: textAppear .25s 4s forwards;
+}
+h1::selection {
+    color: #2a2a2a;
+    background: white;
+}
+@keyframes textAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        border-radius: 100px;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(20);
+    }
+}
