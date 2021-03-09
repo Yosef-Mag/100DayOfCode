@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 100vh;
+  place-items: center;
+  overflow: hidden;
+}
+span {
+  transform: scale(1);
+  animation: grow  3.5s linear infinite ;
+  opacity: 0.6;
+}
+span:nth-child(7n+1) {
+  color: red;
+}
+span:nth-child(7n+2) {
+  color: orange;
+}
+span:nth-child(7n+3) {
+  color: yellowgreen;
+}
+span:nth-child(7n+4) {
+  color: green;
+}
+span:nth-child(7n+5) {
+  color: dodgerblue;
+}
+span:nth-child(7n+6) {
+  color: indigo;
+}
+span:nth-child(7n+7) {
+  color: violet;
+}
+span:nth-child(14n+1) {
+  animation-delay: calc( 3.5s / 14 * 1);
+  justify-self: start;
+  align-self: center;
+}
+span:nth-child(14n+2) {
+  animation-delay: calc( 3.5s / 14 * 2);
+  justify-self: end;
+  align-self: end;
+}
+span:nth-child(14n+3) {
+  animation-delay: calc( 3.5s / 14 * 3);
+  justify-self: end;
+  align-self: center;
+}
+span:nth-child(14n+4) {
+  animation-delay: calc( 3.5s / 14 * 4);
+  justify-self: center;
+  align-self: end;
+}
+span:nth-child(14n+5) {
+  animation-delay: calc( 3.5s / 14 * 5);
+  justify-self: start;
+  align-self: center;
+}
+span:nth-child(14n+6) {
+  animation-delay: calc( 3.5s / 14 * 6);
+  justify-self: center;
+  align-self: start;
+}
+span:nth-child(14n+7) {
+  animation-delay: calc( 3.5s / 14 * 7);
+  justify-self: end;
+  align-self: center;
+}
+span:nth-child(14n+8) {
+  animation-delay: calc( 3.5s / 14 * 8);
+  justify-self: center;
+  align-self: end;
+}
+span:nth-child(14n+9) {
+  animation-delay: calc( 3.5s / 14 * 9);
+  justify-self: start;
+  align-self: center;
+}
+span:nth-child(14n+10) {
+  animation-delay: calc( 3.5s / 14 * 10);
+  justify-self: center;
+  align-self: start;
+}
+span:nth-child(14n+11) {
+  animation-delay: calc( 3.5s / 14 * 11);
+  justify-self: end;
+  align-self: center;
+}
+span:nth-child(14n+12) {
+  animation-delay: calc( 3.5s / 14 * 12);
+  justify-self: center;
+  align-self: end;
+}
+span:nth-child(14n+13) {
+  animation-delay: calc( 3.5s / 14 * 13);
+  justify-self: start;
+  align-self: center;
+}
+span:nth-child(14n+14) {
+  animation-delay: calc( 3.5s / 14 * 14);
+  justify-self: center;
+  align-self: start;
+}
+@keyframes grow {
+  to {
+    transform: scale(42);
+    opacity: 0.05;
+  }
+}
