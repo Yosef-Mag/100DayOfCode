@@ -1,0 +1,246 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background: #b5e8fb;
+}
+
+* {
+  position: absolute;
+}
+
+*:before, *:after {
+  content: "";
+  position: absolute;
+}
+
+.polaroid {
+  width: 420px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+}
+
+.polaroid-body {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px #9de0fa;
+          box-shadow: 10px 10px #9de0fa;
+}
+
+.button {
+  width: 10%;
+  height: 5%;
+  top: -3%;
+  left: 14%;
+  background-color: #cb214a;
+  border-radius: 16px;
+  -webkit-animation: button 5s linear infinite;
+          animation: button 5s linear infinite;
+}
+
+.flash {
+  width: 24%;
+  height: 15%;
+  top: -12%;
+  left: 38%;
+  background-color: #34495e;
+  border-radius: 8px;
+}
+
+.flash:after {
+  width: 42%;
+  height: 56%;
+  background-color: #7796b4;
+  border-radius: 5px;
+  top: 12%;
+  left: 28%;
+}
+
+.blinker {
+  background-color: #212f3d;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 15%;
+  left: 15%;
+  -webkit-animation: blinker 5s linear infinite;
+          animation: blinker 5s linear infinite;
+}
+
+.zoom {
+  width: 50%;
+  height: 75%;
+  left: 25%;
+  top: 12.5%;
+  background: #212f3d;
+  border-radius: 50%;
+  border: 5px solid #34495e;
+  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  -webkit-animation: zoom 5s linear infinite;
+          animation: zoom 5s linear infinite;
+}
+
+.zoom:before {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  background: #2c3e50;
+  border: 10px solid #34495e;
+}
+
+.zoom:after {
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+  border-radius: 50%;
+  background: #212f3d;
+}
+
+.reflection {
+  background-color: #fff;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  left: -35%;
+  top: -35%;
+  z-index: 99;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.reflection:after {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.4;
+  left: 50%;
+  top: 105%;
+}
+
+.stripes {
+  height: 7px;
+  width: 40%;
+  right: 0;
+  top: 40%;
+  -webkit-box-shadow: 0px 7px #d60079, 0px 14px #e68d15, 0px 21px #fec803, 0px 28px #dde56b, 0px 35px #3ea230, 0px 42px #0188c2;
+          box-shadow: 0px 7px #d60079, 0px 14px #e68d15, 0px 21px #fec803, 0px 28px #dde56b, 0px 35px #3ea230, 0px 42px #0188c2;
+}
+
+.flashlight {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all ease 0.2;
+  transition: all ease 0.2;
+  opacity: 0;
+  -webkit-animation: flashlight 5s linear infinite;
+          animation: flashlight 5s linear infinite;
+}
+
+@-webkit-keyframes button {
+  5%, 15% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes button {
+  5%, 15% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@-webkit-keyframes zoom {
+  20%, 32% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@keyframes zoom {
+  20%, 32% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@-webkit-keyframes blinker {
+  33%, 37%, 39%, 43%, 45%, 50% {
+    background-color: #212f3d;
+  }
+  34%, 36%, 40%, 42%, 46%, 48% {
+    background-color: #cb214a;
+  }
+}
+
+@keyframes blinker {
+  33%, 37%, 39%, 43%, 45%, 50% {
+    background-color: #212f3d;
+  }
+  34%, 36%, 40%, 42%, 46%, 48% {
+    background-color: #cb214a;
+  }
+}
+
+@-webkit-keyframes flashlight {
+  55%, 65% {
+    opacity: 0;
+  }
+  56% {
+    opacity: 1;
+  }
+}
+
+@keyframes flashlight {
+  55%, 65% {
+    opacity: 0;
+  }
+  56% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

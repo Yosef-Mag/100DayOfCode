@@ -1,0 +1,197 @@
+$background: #b5e8fb;
+$grey: #34495e;
+$dark-grey: #212f3d;
+$red: #cb214a;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+//The width and height properties (and min/max properties) includes content, padding and border
+html {
+  box-sizing: border-box;
+}
+
+*,*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $background;
+}
+
+//All elements in our illustration need to have an absolute position, and so do all of the :before and :after pseudo-selectors.
+* {
+  position: absolute;
+}
+
+*:before, *:after {
+  content: "";
+  position: absolute;
+}
+
+.polaroid {
+  width: 420px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+}
+
+.polaroid-body {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: #fff;
+  box-shadow: 10px 10px darken($background, 5%);
+}
+
+.button {
+  width: 10%;
+  height: 5%;
+  top: -3%;
+  left: 14%;
+  background-color: $red;
+  border-radius: 16px;
+  animation: button 5s linear infinite;
+}
+
+.flash {
+  width: 24%;
+  height: 15%;
+  top: -12%;
+  left: 38%;
+  background-color: $grey;
+  border-radius: 8px;
+  &:after {
+    width: 42%;
+    height: 56%;
+    background-color: lighten($grey, 30%);
+    border-radius: 5px;
+    top: 12%;
+    left: 28%;
+  }
+}
+
+.blinker {
+  background-color: $dark-grey;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 15%;
+  left: 15%;
+  animation: blinker 5s linear infinite;
+}
+
+.zoom {
+  width: 50%;
+  height: 75%;
+  left: 25%;
+  top: 12.5%;
+  background: $dark-grey;
+  border-radius: 50%;
+  border: 5px solid $grey;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  &:before {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 50%;
+    background: #2c3e50;
+    border: 10px solid $grey;
+  }
+  &:after {
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    border-radius: 50%;
+    background: $dark-grey;
+  }
+  animation: zoom 5s linear infinite;
+}
+
+//The main reflection is made with a square rotated by 45 degrees. I've added the property overflow:hidden to the zoom element to only reveal the part of the reflection that overlaps with the it.
+.reflection {
+  background-color: #fff;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  left: -35%;
+  top: -35%;
+  z-index: 99;
+  transform: rotate(-45deg);
+  &:after {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.4;
+    left: 50%;
+    top: 105%;
+  }
+}
+
+.stripes {
+  height: 7px;
+  width: 40%;
+  right: 0;
+  top: 40%;
+  box-shadow: 0px 7px rgb(214, 0, 121), 0px 14px rgb(230, 141, 21),
+              0px 21px rgb(254, 200, 3), 0px 28px rgb(221, 229, 107),
+          0px 35px rgb(62, 162, 48), 0px 42px rgb(1, 136, 194);
+}
+
+.flashlight {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(white, 0.7);
+  transition: all ease 0.2;
+  opacity: 0;
+  animation: flashlight 5s linear infinite;
+}
+
+@keyframes button {
+  5%, 15% {
+    transform: translateY(0);
+  }
+  
+  10% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes zoom {
+  20%, 32% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes blinker {
+  33%, 37%, 39%, 43%, 45%, 50% {
+    background-color: $dark-grey;
+  }
+  34%, 36%, 40%, 42%, 46%, 48% {
+    background-color: $red;
+  }
+}
+
+@keyframes flashlight {
+  55%, 65% {
+    opacity: 0;
+  }
+  56% {
+    opacity: 1;
+  }
+}
