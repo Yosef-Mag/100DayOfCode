@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300,400,700&display=swap");
+
+$font: "Montserrat";
+
+body {
+  background: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.name {
+  font-family: $font;
+  font-weight: 300;
+  color: #fff;
+}
+
+.mug {
+  width: 350px;
+  height: 300px;
+  border-radius: 0 0 80px 80px;
+  border: 8px #fff solid;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  transition: 0.8s;
+  &--latte {
+    height: 600px;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border: 5px #fff solid;
+    border-left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+  &::before {
+    content: "";
+    width: 90px;
+    height: 160px;
+    right: -100px;
+    border-radius: 0 45px 45px 0;
+  }
+  &::after {
+    width: 60px;
+    height: 100px;
+    right: -70px;
+    border-radius: 0 35px 35px 0;
+  }
+  &__inner {
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 70px 70px;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.types {
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: $font;
+  font-size: 1.375rem;
+  letter-spacing: 1.1px;
+  transition: 0.6s ease-in-out;
+  transition-delay: 0.4s;
+  will-change: height;
+}
+
+.espresso {
+  background: #765c52;
+  color: #fff;
+}
+
+.water {
+  background: #d1f7f6;
+  color: #71b7ae;
+}
+
+.milk {
+  background: #f1e9d9;
+  color: #776558;
+}
+
+.foam {
+  background: #fff;
+  color: #716969;
+}
+
+.chocolate {
+  background: #382b27;
+  color: #fff;
+}
+
+.typeOfCoffe {
+  background: #f1f1f1;
+  margin-top: 40px;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 15px 25px;
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.steam {
+  &__particle {
+    background-color: rgba(255, 255, 255, 1);
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    &--one {
+      animation-name: steamAnimOne;
+      animation-duration: 2.95s;
+      animation-iteration-count: infinite;
+    }
+    &--two {
+      margin-bottom: -10px;
+      animation-name: steamAnimTwo;
+      animation-duration: 2.95s;
+      animation-iteration-count: infinite;
+    }
+    &--three {
+      margin-bottom: -10px;
+      animation-name: steamAnimThree;
+      animation-duration: 2.95s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes steamAnimOne {
+  0% {
+    bottom: 0px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.05;
+    left: 0px;
+  }
+  100% {
+    bottom: 250px;
+    width: 120px;
+    opacity: 0;
+    left: 10px;
+  }
+}
+
+@keyframes steamAnimTwo {
+  0% {
+    bottom: 0px;
+    opacity: 0;
+    left: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    width: 150px;
+    left: 50px;
+  }
+  70% {
+    opacity: 0.05;
+  }
+  100% {
+    bottom: 250px;
+    width: 220px;
+    opacity: 0;
+    left: 30px;
+  }
+}
+
+@keyframes steamAnimThree {
+  0% {
+    bottom: 0px;
+    opacity: 0;
+    left: -30px;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  25% {
+    width: 150px;
+  }
+  60% {
+    opacity: 0.05;
+    left: -50px;
+  }
+  100% {
+    bottom: 200px;
+    width: 220px;
+    opacity: 0;
+    left: -30px;
+  }
+}

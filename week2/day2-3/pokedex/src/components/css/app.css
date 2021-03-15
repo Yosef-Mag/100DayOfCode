@@ -13,7 +13,8 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
@@ -31,34 +32,46 @@
 }
 
 .app {
+  display: -ms-grid;
   display: grid;
 }
 
 .list {
-  justify-self: center;
-  align-self: end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 @media (max-width: 480px) {
   .main {
     padding-top: 10px;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
-    justify-self: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .cards {
     background-color: rgba(255, 255, 255, 0);
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     width: 85vw;
     gap: 15px;
     overflow: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 1;
     grid-row: 1;
   }
   .cards .card {
     width: 80%;
-    box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.5);
     place-self: center;
     border: solid 2px grey;
     cursor: pointer;
@@ -82,15 +95,19 @@
     text-align: center;
   }
   .btn_div {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     padding-top: 10px;
     padding-bottom: 10px;
   }
   .btn_div .btn {
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
     background-color: #8f272e;
-    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.5);
     border-radius: 24px;
     color: white;
   }
@@ -99,23 +116,31 @@
 @media (min-width: 481px) {
   .main {
     padding: 50px;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
-    justify-self: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .cards {
     background-color: rgba(255, 255, 255, 0);
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     width: 85vw;
     gap: 15px;
     overflow: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 1;
     grid-row: 1;
   }
   .cards .card {
     width: 50%;
-    box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.5);
     place-self: center;
     border: solid 2px grey;
     cursor: pointer;
@@ -139,14 +164,18 @@
     text-align: center;
   }
   .btn_div {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     padding-top: 10px;
   }
   .btn_div .btn {
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
     background-color: #8f272e;
-    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.5);
     border-radius: 24px;
     color: white;
   }
