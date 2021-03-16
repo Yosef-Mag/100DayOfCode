@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+      to top right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(https://cdn.pixabay.com/photo/2014/12/29/08/34/bricks-582611_1280.jpg);
+  background-size: cover;
+}
+
+.container {
+  width: 700px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beautiful {
+  color: white;
+  font-family: Quicksand;
+  font-size: 49pt;
+  letter-spacing: 11px;
+  text-shadow: 0px 0px 25px hotpink, 0px 0px 25px rgb(0, 0, 191),
+    0px 0px 25px rgb(0, 0, 191), 0px 0px 25px rgb(0, 0, 191);
+}
+
+#A, #TIFUL {
+  animation: blink 2s 2;
+  animation-delay: 1s;
+  
+}
+
+@keyframes blink {
+  from{text-shadow: 0px 0px 0px transparent; opacity: 0.3;}
+  25%{text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+  30%{text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+ 50%{text-shadow: 0px 0px 25px hotpink, 0px 0px 25px rgb(0, 0, 191),
+    0px 0px 25px rgb(0, 0, 191), 0px 0px 25px rgb(0, 0, 191);opacity: 0.7; }
+   75%{ text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+  to{ text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+}
+
+#BE, #U{
+  animation: flicker 1.7s 1;
+  animation-delay: 4s;
+}
+
+@keyframes flicker{
+  0%{text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+  50%{text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+  100%{text-shadow: 0px 0px 25px hotpink, 0px 0px 25px rgb(0, 0, 191),
+    0px 0px 25px rgb(0, 0, 191), 0px 0px 25px rgb(0, 0, 191);opacity: 1; }
+}
