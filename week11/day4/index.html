@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Tetris</title>
+    <style>
+      body {
+        background: #202028;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 2em;
+        text-align: center;
+      }
+      canvas {
+        border: solid .2em #fff;
+        height: 90vh;
+      }
+      .controles {
+        position: absolute;
+        right: 300px;
+        top: 300px
+      }
+    </style>
+</head>
+<body>
+    <div id="score"></div>
+    <div class="controles" style="text-align: left;">
+      <p>Controles : <br/>&#8595; go down faster <br/>
+        &#8594; move block to the right <br/>
+        &#8592; move block to the left <br/>
+       Q/W rotate block 
+      </p>
+    </div>
+    <canvas id="tetris" width="240" height="400" />
+    <script src="main.js"></script>
+</body>
+</html>
