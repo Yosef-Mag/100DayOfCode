@@ -1,0 +1,43 @@
+div {position:absolute;border:2px solid black;}
+      .aa {height:50px;margin: 200px 0 0 150px;}
+      .bb {width:300px;margin: 200px 0 0 150px;}
+      .cc {height:150px;margin: 300px 0 0 150px;}
+      .dd {height:150px;margin: 200px 0 0 450px;}
+      .ee {width:350px;margin: 450px 0 0 150px;}
+      .ff {height:250px;margin: 200px 0 0 500px;}
+      .gg {height:100px;margin: 250px 0 0 400px;}
+      .hh {height:50px;margin: 400px 0 0 400px;}
+      .ii {height:100px;margin: 300px 0 0 350px;}
+      .jj {height:50px;margin: 250px 0 0 300px;}
+      .kk {height:50px;margin: 300px 0 0 200px;}
+      .ll {height:50px;margin: 300px 0 0 250px;}
+      .mm {width:200px;margin: 250px 0 0 200px;}
+      .nn {width:50px;margin: 300px 0 0 200px;}
+      .oo {width:100px;margin: 350px 0 0 250px;}
+      .pp {width:50px;margin: 350px 0 0 400px;}
+      .qq {width:100px;margin: 400px 0 0 350px;}
+      .rr {width:100px;margin: 400px 0 0 200px;}
+      .ss {
+        border:none;
+        height:45px;
+        width:45px;
+        border-radius:50%;
+        background:black;
+        animation: ball 20s linear infinite;
+      }
+      @keyframes ball {
+        0% {margin-top:255px;}
+        15% {margin-left:255px;margin-top:255px;}
+        20% {margin-top:305px;margin-left:255px;}
+        25% {margin-left:305px;margin-top:305px;}
+        30% {margin-left:305px;margin-top:255px;}
+        35% {margin-left:355px;margin-top:255px;}
+        45% {margin-left:355px;margin-top:355px;}
+        55% {margin-left:455px;margin-top:355px;}
+        60% {margin-left:455px;margin-top:405px;}
+        65% {margin-left:405px;margin-top:405px;}
+        70% {margin-left:455px;margin-top:405px;}
+        80% {margin-left:455px;margin-top:0px;}
+        90% {margin-left:-100px;}
+        100% {margin-left:-100px;margin-top:0;}
+      }
