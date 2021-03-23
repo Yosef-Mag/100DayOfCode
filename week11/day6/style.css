@@ -1,0 +1,202 @@
+/* Common Calculations */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #02021a;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#030323), to(#010111));
+  background-image: linear-gradient(#030323, #010111);
+}
+
+.loop {
+  position: relative;
+  height: 240px;
+  width: 576.41067px;
+}
+
+.loop:before, .loop:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 240px;
+  width: 240px;
+  border: 2px dotted #1f1f4d;
+  border-radius: 50% 50% 50% 0;
+}
+
+.loop:before {
+  left: 0;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.loop:after {
+  right: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.loop__tracer {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  height: 240px;
+  width: 240px;
+  margin-left: -120px;
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  -webkit-animation-name: trace-container;
+          animation-name: trace-container;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+
+.loop__tracer:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin-top: -6px;
+  margin-left: -6px;
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 24px 3px #fff;
+          box-shadow: 0 0 24px 3px #fff;
+  -webkit-animation-name: trace-dot;
+          animation-name: trace-dot;
+  -webkit-animation-duration: inherit;
+          animation-duration: inherit;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.loop__tracer--one {
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+
+.loop__tracer--two {
+  -webkit-animation-duration: 9s;
+          animation-duration: 9s;
+}
+
+.loop__tracer--three {
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+}
+
+@-webkit-keyframes trace-container {
+  0% {
+    margin-left: -120px;
+    -webkit-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+  }
+  8.3333333% {
+    margin-left: -288.372px;
+    -webkit-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+  }
+  41.666666% {
+    margin-left: -288.372px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  58.333333% {
+    margin-left: 48.372px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  91.666666% {
+    margin-left: 48.372px;
+    -webkit-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+  }
+}
+
+@keyframes trace-container {
+  0% {
+    margin-left: -120px;
+    -webkit-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+  }
+  8.3333333% {
+    margin-left: -288.372px;
+    -webkit-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+  }
+  41.666666% {
+    margin-left: -288.372px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  58.333333% {
+    margin-left: 48.372px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  91.666666% {
+    margin-left: 48.372px;
+    -webkit-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+  }
+}
+
+@-webkit-keyframes trace-dot {
+  0% {
+    margin-top: -6px;
+  }
+  8.3333333% {
+    margin-top: -126px;
+  }
+  41.666666% {
+    margin-top: -126px;
+  }
+  58.333333% {
+    margin-top: 114px;
+  }
+  91.666666% {
+    margin-top: 114px;
+  }
+}
+
+@keyframes trace-dot {
+  0% {
+    margin-top: -6px;
+  }
+  8.3333333% {
+    margin-top: -126px;
+  }
+  41.666666% {
+    margin-top: -126px;
+  }
+  58.333333% {
+    margin-top: 114px;
+  }
+  91.666666% {
+    margin-top: 114px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

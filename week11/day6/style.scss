@@ -1,0 +1,107 @@
+$background: #02021a;
+
+$dot-color: #fff;
+$dot-size: 12px;
+
+$line-width: 2px;
+$line-style: dotted;
+$line-color: #1f1f4d;
+$loop-size: 240px;
+
+/* Common Calculations */
+
+$dot-offset: ($dot-size/2);
+$half-loop-size: ($loop-size/2);
+$loop-size-adjusted: ($loop-size*1.20710556);
+
+
+*, *:before, *:after { box-sizing: border-box }
+
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $background;
+	background-image:
+		linear-gradient(
+			lighten($background, 2%),
+			darken($background, 2%)
+		);
+}
+
+.loop {
+	position: relative;
+	height: $loop-size;
+	width: ($loop-size-adjusted*2)-($line-width*1.5);
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		height: $loop-size;
+		width: $loop-size;
+		border: $line-width $line-style $line-color;
+		border-radius: 50% 50% 50% 0;
+	}
+	&:before {
+		left: 0;
+		transform: rotate(225deg);
+	}
+	&:after {
+		right: 0;
+		transform: rotate(45deg);
+	}
+	&__tracer {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 50%;
+		height: $loop-size;
+		width: $loop-size;
+		margin-left: -$half-loop-size;
+		transform: rotate(-225deg);
+		animation-name: trace-container;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-duration: 6s; // Default Duration
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 50%;
+			left: 50%;
+			margin-top: -($dot-offset);
+			margin-left: -($dot-offset);
+			height: $dot-size;
+			width: $dot-size;
+			background-color: $dot-color;
+			border-radius: 50%;
+			box-shadow: 0 0 ($dot-size*2) ($dot-size/4) $dot-color;
+			animation-name: trace-dot;
+			animation-duration: inherit;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		&--one { animation-duration: 7s }
+		&--two { animation-duration: 9s }
+		&--three { animation-duration: 13s }
+	}
+}
+
+@keyframes trace-container {
+	0%  { margin-left: -$half-loop-size; transform: rotate(-225deg) }
+	8.3333333% { margin-left: -(($loop-size-adjusted)-($line-width/1.5)); transform: rotate(-225deg) }
+	41.666666% { margin-left: -(($loop-size-adjusted)-($line-width/1.5)); transform: rotate(45deg) }
+	58.333333% { margin-left: ($loop-size*0.20710556)-($line-width/1.5); transform: rotate(45deg) }
+	91.666666% { margin-left: ($loop-size*0.20710556)-($line-width/1.5); transform: rotate(-225deg) }
+}
+
+@keyframes trace-dot {
+	0% { margin-top: -($dot-offset)}
+	8.3333333% { margin-top: (-$half-loop-size)-($dot-offset)}
+	41.666666% { margin-top: (-$half-loop-size)-($dot-offset)}
+	58.333333% { margin-top: ($half-loop-size)-($dot-offset)}
+	91.666666% { margin-top: ($half-loop-size)-($dot-offset)}
+}
