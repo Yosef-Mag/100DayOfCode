@@ -221,9 +221,7 @@ body{
         -webkit-transform:rotate(25deg);
       }
     }
-
   }
-
   .shadow{
     background-color: $color-shadow;
     height: 18px;
@@ -238,20 +236,16 @@ body{
     animation:shadow 1s infinite;
     -webkit-animation:shadow 1s infinite;
   }
-
   @keyframes shadow{
     50%{
       transform:scaleX(1.13);
     }
   }
-
   @-webkit-keyframes shadow{
     50%{
       -webkit-transform:scaleX(1.13);
     }
   }
-  
-
 
   .cloud-1,.cloud-2,.cloud-3,.cloud-4{
     background-color: white;
@@ -260,7 +254,6 @@ body{
     position: absolute;
     border-radius: 120px;
     z-index: -3;
-
     &::before{
       position: absolute;
       content: "";
@@ -271,7 +264,6 @@ body{
       bottom: 10px;
       left: 15px;
     }
-
     &::after{
       position: absolute;
       content: "";
@@ -284,21 +276,18 @@ body{
     }
 
   }
-  
   .cloud-1{
     top:45px;
     right: -130px;
     animation:cloud 10s 7s infinite linear;
     -webkit-animation:cloud 10s 7s infinite linear;
   }
-
   .cloud-2{
     top:85px;
     right:-130px;
     animation:cloud 10s infinite linear;
     -webkit-animation:cloud 10s infinite linear;
   }
-  
   .cloud-3{
     top:100px;
     right:-130px;
@@ -311,13 +300,11 @@ body{
     animation:cloud 10s 3s infinite linear;
     -webkit-animation:cloud 10s 3s infinite linear;
   }
-
   @keyframes cloud{
     100%{
       transform:translateX(-1000px);
     }
   }
-
   @-webkit-keyframes cloud{
     100%{
       -webkit-transform:translateX(-1000px);
