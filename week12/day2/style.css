@@ -1,0 +1,511 @@
+:root {
+  --sky-red: #ff3730;
+  --sky-violet: #7b0080;
+  --sky-cyan: #33e4ff;
+  --sky-blue:  #000480;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #123;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  overflow: hidden;
+  background: #33e4ff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: sky-colors 7s linear infinite;
+          animation: sky-colors 7s linear infinite;
+}
+
+.sand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  z-index: 1;
+  width: 200px;
+  background: darkkhaki;
+  -webkit-animation: sand-colors 7s linear infinite;
+          animation: sand-colors 7s linear infinite;
+}
+
+.pyramid {
+  position: absolute;
+  bottom: 70px;
+  left: 35px;
+  height: 70px;
+  width: 120px;
+  background: #f4f4ef;
+  z-index: 1;
+  -webkit-clip-path: polygon(0% 75%, 50% 100%, 100% 75%, 50% 0%);
+          clip-path: polygon(0% 75%, 50% 100%, 100% 75%, 50% 0%);
+  -webkit-animation: pyramid-color 7s linear infinite;
+          animation: pyramid-color 7s linear infinite;
+}
+
+.pyramid:before, .pyramid:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 70px;
+  width: 60px;
+}
+
+.pyramid:before {
+  left: 0;
+  -webkit-clip-path: polygon(100% 0%, 0% 75%, 100% 100%);
+          clip-path: polygon(100% 0%, 0% 75%, 100% 100%);
+  background: rgba(0, 0, 50, 0.1);
+  -webkit-animation: pyramide-shading 7s linear infinite;
+          animation: pyramide-shading 7s linear infinite;
+}
+
+.pyramid:after {
+  left: 60px;
+  -webkit-clip-path: polygon(0% 100%, 100% 75%, 0% 0%);
+          clip-path: polygon(0% 100%, 100% 75%, 0% 0%);
+  background: rgba(0, 0, 50, 0.1);
+  -webkit-animation: pyramide-shading-rev 7s linear infinite;
+          animation: pyramide-shading-rev 7s linear infinite;
+}
+
+.sun {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff0;
+  -webkit-box-shadow: 0 0 5px 5px #ff0;
+          box-shadow: 0 0 5px 5px #ff0;
+  -webkit-transform-origin: 450% 50%;
+          transform-origin: 450% 50%;
+  -webkit-animation: sun-goes-down 7s linear infinite;
+          animation: sun-goes-down 7s linear infinite;
+}
+
+.moon {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  -webkit-box-shadow: 0 0 5px 5px white;
+          box-shadow: 0 0 5px 5px white;
+  -webkit-transform-origin: 450% 50%;
+          transform-origin: 450% 50%;
+  -webkit-animation: moon-goes-up 7s linear infinite;
+          animation: moon-goes-up 7s linear infinite;
+}
+
+.shadow-sun {
+  position: absolute;
+  z-index: 1;
+  top: 110px;
+  left: -80px;
+  height: 40px;
+  width: 350px;
+  background: rgba(0, 0, 50, 0.2);
+  -webkit-clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+          clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+  -webkit-animation: shadow-from-sun 7s linear infinite;
+          animation: shadow-from-sun 7s linear infinite;
+}
+
+.shadow-moon {
+  position: absolute;
+  z-index: 1;
+  top: 110px;
+  left: -80px;
+  height: 40px;
+  width: 350px;
+  background: rgba(0, 0, 50, 0.3);
+  -webkit-clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+          clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+  -webkit-animation: shadow-from-moon 7s linear infinite;
+          animation: shadow-from-moon 7s linear infinite;
+}
+
+@-webkit-keyframes pyramid-color {
+  0% {
+    background: #a5a5a5;
+  }
+  25% {
+    background: #f4f4ef;
+  }
+  50% {
+    background: #a5a5a5;
+  }
+  75% {
+    background: #dbdbd5;
+  }
+  100% {
+    background: #a5a5a5;
+  }
+}
+
+@keyframes pyramid-color {
+  0% {
+    background: #a5a5a5;
+  }
+  25% {
+    background: #f4f4ef;
+  }
+  50% {
+    background: #a5a5a5;
+  }
+  75% {
+    background: #dbdbd5;
+  }
+  100% {
+    background: #a5a5a5;
+  }
+}
+
+@-webkit-keyframes pyramide-shading {
+  0% {
+    background: rgba(0, 0, 50, 0.25);
+  }
+  25% {
+    background: rgba(0, 0, 50, 0.1);
+  }
+  50%, 100% {
+    background: rgba(0, 0, 50, 0.25);
+  }
+}
+
+@keyframes pyramide-shading {
+  0% {
+    background: rgba(0, 0, 50, 0.25);
+  }
+  25% {
+    background: rgba(0, 0, 50, 0.1);
+  }
+  50%, 100% {
+    background: rgba(0, 0, 50, 0.25);
+  }
+}
+
+@-webkit-keyframes pyramide-shading-rev {
+  0% {
+    background: rgba(0, 0, 50, 0.1);
+  }
+  25% {
+    background: rgba(0, 0, 50, 0.25);
+  }
+  50%, 100% {
+    background: rgba(0, 0, 50, 0.1);
+  }
+}
+
+@keyframes pyramide-shading-rev {
+  0% {
+    background: rgba(0, 0, 50, 0.1);
+  }
+  25% {
+    background: rgba(0, 0, 50, 0.25);
+  }
+  50%, 100% {
+    background: rgba(0, 0, 50, 0.1);
+  }
+}
+
+@-webkit-keyframes shadow-from-sun {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+            clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+    opacity: 0;
+  }
+  25% {
+    -webkit-clip-path: polygon(33% 2px, 50% 100%, 67% 2px);
+            clip-path: polygon(33% 2px, 50% 100%, 67% 2px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+            clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+    opacity: 1;
+  }
+  75% {
+    -webkit-clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+            clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+            clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+    opacity: 0;
+  }
+}
+
+@keyframes shadow-from-sun {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+            clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+    opacity: 0;
+  }
+  25% {
+    -webkit-clip-path: polygon(33% 2px, 50% 100%, 67% 2px);
+            clip-path: polygon(33% 2px, 50% 100%, 67% 2px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+            clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+    opacity: 1;
+  }
+  75% {
+    -webkit-clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+            clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+            clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes shadow-from-moon {
+  0% {
+    -webkit-clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+            clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+    opacity: 0;
+  }
+  25% {
+    -webkit-clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+            clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+            clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+    opacity: 0;
+  }
+  75% {
+    -webkit-clip-path: polygon(33% 2px, 50% 100%, 67% 2px);
+            clip-path: polygon(33% 2px, 50% 100%, 67% 2px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+            clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+    opacity: 1;
+  }
+}
+
+@keyframes shadow-from-moon {
+  0% {
+    -webkit-clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+            clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+    opacity: 0;
+  }
+  25% {
+    -webkit-clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+            clip-path: polygon(33% 2px, 50% -100%, 67% 2px);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+            clip-path: polygon(50% 50%, 100% 100%, 67% 2px);
+    opacity: 0;
+  }
+  75% {
+    -webkit-clip-path: polygon(33% 2px, 50% 100%, 67% 2px);
+            clip-path: polygon(33% 2px, 50% 100%, 67% 2px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+            clip-path: polygon(33% 2px, 0% 100%, 50% 22px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sky-colors {
+  0% {
+    background: #0d1073;
+  }
+  25%, 40% {
+    background: #33e4ff;
+  }
+  65% {
+    background: #000480;
+  }
+  82% {
+    background: #303150;
+  }
+  100% {
+    background: #000480;
+  }
+}
+
+@keyframes sky-colors {
+  0% {
+    background: #0d1073;
+  }
+  25%, 40% {
+    background: #33e4ff;
+  }
+  65% {
+    background: #000480;
+  }
+  82% {
+    background: #303150;
+  }
+  100% {
+    background: #000480;
+  }
+}
+
+@-webkit-keyframes sand-colors {
+  0% {
+    background: #484848;
+  }
+  25%, 40% {
+    background: #dcd9b2;
+  }
+  65%, 100% {
+    background: #484848;
+  }
+}
+
+@keyframes sand-colors {
+  0% {
+    background: #484848;
+  }
+  25%, 40% {
+    background: #dcd9b2;
+  }
+  65%, 100% {
+    background: #484848;
+  }
+}
+
+@-webkit-keyframes moon-goes-up {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes moon-goes-up {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes sun-goes-down {
+  0% {
+    background: #F57209;
+    -webkit-box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+            box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    background: #f88e39;
+    -webkit-box-shadow: 0 0 5px 5px #f88e39;
+            box-shadow: 0 0 5px 5px #f88e39;
+  }
+  25% {
+    background: #ff0;
+    -webkit-box-shadow: 0 0 5px 5px #ff0;
+            box-shadow: 0 0 5px 5px #ff0;
+  }
+  45% {
+    background: #f88e39;
+    -webkit-box-shadow: 0 0 5px 5px #f88e39;
+            box-shadow: 0 0 5px 5px #f88e39;
+  }
+  50% {
+    background: #F57209;
+    -webkit-box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+            box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+  }
+  100% {
+    background: #F57209;
+    -webkit-box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+            box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes sun-goes-down {
+  0% {
+    background: #F57209;
+    -webkit-box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+            box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    background: #f88e39;
+    -webkit-box-shadow: 0 0 5px 5px #f88e39;
+            box-shadow: 0 0 5px 5px #f88e39;
+  }
+  25% {
+    background: #ff0;
+    -webkit-box-shadow: 0 0 5px 5px #ff0;
+            box-shadow: 0 0 5px 5px #ff0;
+  }
+  45% {
+    background: #f88e39;
+    -webkit-box-shadow: 0 0 5px 5px #f88e39;
+            box-shadow: 0 0 5px 5px #f88e39;
+  }
+  50% {
+    background: #F57209;
+    -webkit-box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+            box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+  }
+  100% {
+    background: #F57209;
+    -webkit-box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+            box-shadow: 0 0 5px 5px #F57209, 0 0 25px 15px #F57209, 0 0 50px 50px purple;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
