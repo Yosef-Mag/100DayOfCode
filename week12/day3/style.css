@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper-content{
+        width: 370px;
+        height: 238px;
+        z-index: 1;
+        position: relative;
+        padding: 0 150px;
+    }
+.apple {
+    background: linear-gradient(to bottom, transparent 30%, #B8CB31 30%);
+    border: 10px solid #47271A;
+    border-radius: 65px 65px 155px 155px;
+    width: 329px;
+    height: 232px;
+    position: relative;
+    border-top: none;
+    position: relative;
+}
+.apple:after{
+        right: -9px;
+        transform: scale(-1,1);
+    }
+.apple:before{
+        left: -9px;
+    }
+.apple:before,
+    .apple:after {
+        content: '';
+        background: #B8CB31;
+        position: absolute;
+        top: -54px;
+        width: 196px;
+        height: 118px;
+        border: 10px solid #47271A;
+        border-radius: 117px 99px 0px 0px;
+    }
+.apple__inner {
+        position: absolute;
+        top: -34px;
+        left: 114px;
+        width: 54px;
+        height: 128px;
+        background: #B8CB31;
+        z-index: 1;
+        border-radius: 10px 26px 10px 10px;
+    }
+.apple__inner:before,
+        .apple__inner:after {
+            content:  '';
+            width: 163px;
+            height: 226px;
+            top: -1px;
+            background: #B8CB31;
+            position: absolute;
+        }
+.apple__inner:before {
+            left: -114px;
+            border-radius: 103px 40px 40px 100px;
+        }
+.apple__inner:after {
+            border-radius: 106px 223px 295px 0px;
+            right: -161px;
+            height: 276px;
+            top: -10px;
+            box-shadow: inset -28px -6px 0 -7px #97A824;
+        }
+.apple__tail {
+        position: absolute;
+        border-color: #47271A transparent transparent;
+        border-style: solid;
+        border-width: 89px 17px;
+        top: -105px;
+        left: 143px;
+        transform: skewX(-17deg);
+        border-radius: 20px;
+    }
+.apple__highlight {
+        border: 15px solid #E2E03D;
+        position: absolute;
+        left: -90px;
+        top: 0;
+        height: 146px;
+        width: 100px;
+        border-radius: 100%;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        transform: rotate(34deg);
+    }
+.apple__highlight:before,
+        .apple__highlight:after {
+            content: '';
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            border-radius: 100%;
+            background: #E2E03D;
+        }
+.apple__highlight:after {
+            top: 7px;
+            left: 3px
+        }
+.apple__highlight:before {
+            top: 127px;
+            left: 5px;
+        }
+.apple__eye {
+        border: 8px solid #47271A;
+        border-radius: 100%;
+        width: 27px;
+        height: 25px;
+        background: #FDFFC0;
+        position: absolute;
+        top: 60px;
+        z-index: 1;
+        transform-origin: center top;
+        -webkit-animation: eyes 2.5s infinite;
+                animation: eyes 2.5s infinite;
+    }
+.apple__eye:before {
+            content: '';
+            bottom: -8px;
+            height: 8px;
+            background: #47271A;
+            left: -13px;
+            right: -14px;
+            position: absolute;
+            border-radius: 7px;
+        }
+.apple__eye--right {
+            right: 54px;
+        }
+.apple__eye--left {
+            left: 54px;
+        }
+.apple__mouth {
+        background: #47271A;
+        position: absolute;
+        left: 111px;
+        top: 116px;
+        width: 87px;
+        height: 27px;
+        border-radius: 20px 20px 100px 100px;
+        border: 10px solid #47271A;
+        z-index: 1;
+        transform-origin: center top;
+        -webkit-animation: mouth 2.5s infinite;
+                animation: mouth 2.5s infinite;
+    }
+.apple__teeth {
+        position: absolute;
+        left: 122px;
+        top: 126px;
+        width: 24px;
+        height: 11px;
+        border-radius: 0 0 100px 100px;
+        background: #FDFFC0;
+        z-index: 1;
+    }
+.apple__teeth:before,
+        .apple__teeth:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 24px;
+            height: 11px;
+            border-radius: 0 0 100px 100px;
+            background: inherit;
+        }
+.apple__teeth:before {
+            left: 29px;
+        }
+.apple__teeth:after {
+            left: 59px;
+        }
+.liquid {
+    position: absolute;
+    top: 148px;
+    left: 168px;
+    background: #DCE66B;
+    width: 20px;
+    height: 54px;
+    border-radius: 10px;
+    z-index: 1;
+    transform-origin: center top;
+    -webkit-animation: liquid 2.5s infinite;
+            animation: liquid 2.5s infinite;
+}
+.liquid:after {
+        content: "";
+        top: 0;
+        left: 29px;
+        width: 14px;
+        height: 36px;
+        position: absolute;
+        background: inherit;
+        border-radius: inherit;
+        transform-origin: center top;
+        -webkit-animation: liquid 2.5s infinite;
+                animation: liquid 2.5s infinite;
+    }
+.holes{
+    position: absolute;
+    top: -75px;
+    left: 365px;
+    width: 153px;
+    height: 145px;
+    z-index: 1;
+}
+.hole {
+    position: absolute;
+    border-radius: 100%;
+    border: 10px solid #47271A;
+    background: #ffffff;
+    width: 146px;
+    height: 108px;
+    transform: rotate(35deg);
+    top: -12px;
+    left: -1px;
+}
+.hole:before {
+        content: '';
+        position: absolute;
+        background: #ffffff;
+        top: -32px;
+        left: -19px;
+        width: 183px;
+        height: 109px;
+        transform: rotate(1deg);
+    }
+@-webkit-keyframes eyes {
+    0%, 86% {
+        transform: scaleY(1);
+    }
+    71% {
+        transform: scaleY(0.85);
+    }
+}
+@keyframes eyes {
+    0%, 86% {
+        transform: scaleY(1);
+    }
+    71% {
+        transform: scaleY(0.85);
+    }
+}
+@-webkit-keyframes mouth {
+    0%, 90%  {
+        transform: scaleY(1)
+    }
+    50%, 70% {
+        transform: scaleY(1.1)
+    }
+}
+@keyframes mouth {
+    0%, 90%  {
+        transform: scaleY(1)
+    }
+    50%, 70% {
+        transform: scaleY(1.1)
+    }
+}
+@-webkit-keyframes liquid{
+    0%, 90%  {
+        transform: scaleY(1)
+    }
+    50%, 70% {
+        transform: scaleY(1.3)
+    }
+}
+
+@keyframes liquid{
+    0%, 90%  {
+        transform: scaleY(1)
+    }
+    50%, 70% {
+        transform: scaleY(1.3)
+    }
+}
