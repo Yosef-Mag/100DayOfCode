@@ -1,0 +1,117 @@
+* {
+    box-sizing:border-box;
+  }
+  body {
+    display:flex;
+    height:100vh;width:100%;
+    align-items:center;
+    background: #f85032;  
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);  
+    background: linear-gradient(to right, #e73827, #f85032); 
+    overflow: hidden;
+  }
+  
+  $bullet_bg : #101010;
+  
+  .bullet {
+    display:flex;
+    animation:linear infinite firebullet 6s;
+    position:absolute;
+    left:-300px;
+    .behind_bullet {
+      width:40px;
+      background-color: $bullet_bg;
+      height:175px;
+      border-top-left-radius:10px;
+      border-bottom-left-radius:10px;
+      border-top-right-radius:20px;
+      border-bottom-right-radius:20px;
+      margin-right:8px;
+      position:relative;
+      &:after {
+        content:'';
+        position:absolute;
+        width:8px;
+        right:-8px;
+        top:20px;
+        height:140px;
+        background-color:black;
+      }
+    }
+    .bullet_body {
+      height:175px;
+      width:250px;
+      background-color: $bullet_bg;
+      border-top-right-radius:50%;
+      border-bottom-right-radius:50%;
+      position:relative;
+      overflow:hidden;
+      .bullets_eye {
+        width:45px;
+        height:30px;
+        transform:rotate(45deg);
+        background-color:white;
+        position:absolute;
+        top:60px;
+        right:35px;
+        border-bottom-left-radius:50%;
+        border-bottom-right-radius:50%;
+        overflow:hidden;
+        &:after {
+          content:'';
+          height:26px;width:26px;
+          background-color:black;
+          position:absolute;
+          top:-14px;
+          border-radius:50%;
+          left:0;right:0;
+          margin:0 auto;
+        }
+      } // end eye 
+      .bullets_mouth {
+        height:50px;
+        width:100px;
+        background-color:#C12A28;
+        transform:rotate(45deg);
+        position: absolute;
+        bottom:12px;
+        right:50px;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        border-top-left-radius:25px;
+        border-bottom-left-radius:25px;
+        .top_row {
+          height:25px;
+          width:100%;
+          display:flex;
+          justify-content:space-between;
+          .tooth { 
+           width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 12.5px 0 12.5px;
+    border-color: #ffffff transparent transparent transparent;
+          }
+        }
+        .bottom_row {
+          height:25px;
+          width:100%;
+          display:flex;
+          justify-content:space-between;
+          .tooth {
+            width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12.5px 25px 12.5px;
+    border-color: transparent transparent #ffffff transparent;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes firebullet {
+      0% { left: -300px;}
+      100%{ left : 100%;}
+  }
