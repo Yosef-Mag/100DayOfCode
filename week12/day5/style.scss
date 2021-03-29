@@ -1,0 +1,254 @@
+$color : #ddd;
+$bg-color : #425;
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    background:$bg-color;
+    color: $color;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-weight : 300;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+input{
+	display: none;
+}
+.text{
+	height: 50px;
+	width: 300px;
+	margin-top : 50px;
+	margin-left: 50px;
+	text-align: center;
+}
+p{
+	margin: 0 auto 8px;
+}
+.labels{
+	height: 100%;
+	width: 100%;
+}
+label{
+	position: relative;
+	cursor: pointer;
+	margin: 0 10px;
+	padding-left : 20px;
+	&:after{
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 9px;
+		width: 10px;
+		height: 10px;
+		background: $bg-color;
+		box-shadow: 0 0 0 3px $bg-color, 0 0 0 4px $color;
+		border-radius: 50%;
+	}
+}
+
+@for $j from 1 to 6{
+	#radio-#{$j}:checked ~ .text > .labels > .label-#{$j}:after {
+		background: $color;
+		box-shadow: 0 0 0 4px $color;
+	}
+}
+
+.cradle{
+	width: 220px;
+	height: 260px;
+	position: relative;
+	margin-top : 30px;
+	margin-left : 90px;
+	&:after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: inherit;
+		height: 6px;
+  	    background: $color;
+		border-radius : 5px;
+	}
+}
+
+$b-width: 40px;
+
+.cradle__balls{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+	width: $b-width * 5;
+	height: 150px;
+}
+
+$s-width : 1px;
+.cradle__ball{
+	position: absolute;
+	bottom: 0;
+	width: $s-width;
+	height: inherit;
+	background: $color;
+	transform-origin: center top;
+	animation:  none;
+	&:before{
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: -$b-width/2 + $s-width/2;
+		width: $b-width;
+		height: $b-width;
+		border-radius: 50%;
+		background: $color;
+	}
+	&.b1{
+		left: $b-width/2 - 2;
+	}
+	&.b2{
+		left: $b-width * 2 - $b-width/2 - 2;
+	}
+	&.b3{
+		left: $b-width * 3 - $b-width/2 - 2;
+	}
+	&.b4{
+		left: $b-width * 4 - $b-width/2 - 2;
+	}
+	&.b5{
+		left: $b-width * 5 - $b-width/2 - 2;
+	}
+}
+
+$timing: ease-out;
+$direction: alternate;
+$deg: 30;
+$total-time: 40; //sec
+$decay: $deg/$total-time;
+
+
+// timing function for decay based on : 
+$anim-ball-l: 'empty 0s';
+$anim-ball-r: 'empty 0s';
+$anim-ball-c: 'empty 0s';
+$anim-ball-all: 'empty 0s';
+@keyframes empty{
+	to{
+		transform: rotate(0deg)
+	}
+};
+@for $i from 0 through $total-time{
+	
+	$d: #{$deg - $decay * $i}deg; //decaying rotation
+	
+	$delay-l: #{$i* 1.4}s;
+	$delay-r: #{$i* 1.4 + 0.7}s;
+	$delay-all: #{$i* 3}s;
+	@keyframes keys-ball-l-#{$i}{
+		0%, 100% {
+			transform: rotate(0deg);
+		}
+		50% {
+			transform: rotate($d);
+		}
+	}
+	$anim-ball-l: $anim-ball-l, keys-ball-l-#{$i} 0.5s $delay-l $timing 1 $direction;
+	
+	@keyframes keys-ball-r-#{$i}{
+		0%, 100% {
+			transform: rotate(0deg);
+		}
+		50% {
+			transform: rotate(-$d);
+		}
+	}
+
+	$anim-ball-r: $anim-ball-r, keys-ball-r-#{$i} 0.5s $delay-r $timing 1 $direction;
+	$anim-ball-c: $anim-ball-c, $anim-ball-l, $anim-ball-r;
+	
+	@keyframes  keys-ball-all-#{$i}{
+		0% {
+			animation-timing-function: ease-out;
+			transform: rotate(0deg);
+		}
+		25% {
+			animation-timing-function: ease-in;
+			transform: rotate($d);
+		}
+		50% {
+			animation-timing-function: ease-out;
+			transform: rotate(0deg);
+		}
+		75% {
+			animation-timing-function: ease-in;
+			transform: rotate(-$d);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+	$anim-ball-all:  $anim-ball-all, keys-ball-all-#{$i} 2s $delay-all;
+}
+
+
+#radio-1:checked ~ .cradle > .cradle__balls.g1{
+	opacity: 1;
+	.b1{
+		animation: $anim-ball-l;
+	}
+	.b5{
+		animation:  $anim-ball-r;
+	}
+}
+
+#radio-2:checked ~ .cradle > .cradle__balls.g2{
+	opacity: 1;
+	.b1, .b2{
+		animation: $anim-ball-l;
+	}
+	.b4, .b5{
+		animation:  $anim-ball-r;
+	}
+}
+
+#radio-3:checked ~ .cradle > .cradle__balls.g3{
+	opacity: 1;
+	.b1, .b2{
+		animation: $anim-ball-l;
+	}
+	.b3{
+		animation: $anim-ball-c;
+	}
+	.b4, .b5{
+		animation:  $anim-ball-r;
+	}
+}
+
+#radio-4:checked ~ .cradle > .cradle__balls.g4{
+	opacity: 1;
+	.b1{
+		animation: $anim-ball-l;
+	}
+	.b2, .b3, .b4{
+		animation: $anim-ball-c;
+	}
+	.b5{
+		animation:  $anim-ball-r;
+	}
+}
+
+#radio-5:checked ~ .cradle > .cradle__balls.g5{
+	opacity: 1;
+	.cradle__ball{
+		animation:  $anim-ball-all;
+	}
+}
