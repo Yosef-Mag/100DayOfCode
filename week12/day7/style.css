@@ -1,0 +1,414 @@
+@-webkit-keyframes soundOn {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes soundOn {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@-webkit-keyframes soundOnToo {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  50% {
+    -webkit-transform: scale(1.32);
+            transform: scale(1.32);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes soundOnToo {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  50% {
+    -webkit-transform: scale(1.32);
+            transform: scale(1.32);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@-webkit-keyframes soundOnOut {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes soundOnOut {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@-webkit-keyframes textInOut {
+  0%, 100% {
+    -webkit-transform: scale(1) translate(0);
+            transform: scale(1) translate(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  30% {
+    -webkit-transform: scale(1.05) translate(0, 10px);
+            transform: scale(1.05) translate(0, 10px);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  70% {
+    -webkit-transform: scale(1.25) translate(0, -20px);
+            transform: scale(1.25) translate(0, -20px);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes textInOut {
+  0%, 100% {
+    -webkit-transform: scale(1) translate(0);
+            transform: scale(1) translate(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  30% {
+    -webkit-transform: scale(1.05) translate(0, 10px);
+            transform: scale(1.05) translate(0, 10px);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  70% {
+    -webkit-transform: scale(1.25) translate(0, -20px);
+            transform: scale(1.25) translate(0, -20px);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 3em auto;
+  font-family: 'Concert One', cursive;
+}
+
+div#speakers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6fr 6fr;
+      grid-template-columns: 6fr 6fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-row-gap: 15px;
+      grid-template-areas: "tagLine tagLine"  "speakerA speakerB";
+}
+
+div#speakers #outline2 {
+  -webkit-animation: soundOnOut 2s infinite;
+          animation: soundOnOut 2s infinite;
+}
+
+div#speakers #outline3 {
+  -webkit-animation: soundOn 3s infinite;
+          animation: soundOn 3s infinite;
+}
+
+div#speakers #outline4 {
+  -webkit-animation: soundOnToo 3s infinite;
+          animation: soundOnToo 3s infinite;
+}
+
+div#speakers #tagLine span {
+  -webkit-animation: textInOut 3s infinite;
+          animation: textInOut 3s infinite;
+}
+
+div#speakers #tagLine span:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+div#speakers #tagLine span:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+div#speakerA {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: speakerA;
+}
+
+div#speakerA div#outlineA {
+  -webkit-transform: skew(-75deg) translateX(44px);
+          transform: skew(-75deg) translateX(44px);
+  border-top-right-radius: 15%;
+}
+
+div#speakerA div#outlineB {
+  -webkit-transform: skew(0, -15deg) translate(147px, 28px);
+          transform: skew(0, -15deg) translate(147px, 28px);
+  border-top-right-radius: 3%;
+}
+
+div#speakerA div#outline1 {
+  border-right: 1px solid #fafafa;
+}
+
+div#speakerB {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: speakerB;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+div#speakerB div#outlineA {
+  -webkit-transform: skew(75deg) translateX(-46px);
+          transform: skew(75deg) translateX(-46px);
+  border-top-left-radius: 15%;
+}
+
+div#speakerB div#outlineB {
+  -webkit-transform: skew(0, 15deg) translate(-83px, 11px);
+          transform: skew(0, 15deg) translate(-83px, 11px);
+  border-top-left-radius: 3%;
+}
+
+div#speakerB div#outline1 {
+  -webkit-transform: translate(-2px);
+          transform: translate(-2px);
+  border-left: 1px solid #fafafa;
+}
+
+div#outlineA {
+  width: 148px;
+  height: 24px;
+  background: #565656;
+}
+
+div#outlineB {
+  width: 82px;
+  height: 160px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#565656), to(#ececec));
+  background: linear-gradient(top, #565656, #ececec);
+}
+
+div#outline1 {
+  width: 148px;
+  height: 160px;
+  top: -160px;
+  border-top: 1px solid #fafafa;
+  background: #565656;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+div#outline2 {
+  width: 124px;
+  height: 145px;
+  border: 4px solid #c0c0c0;
+  background: #5a5a5a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+div#outline3 {
+  background: radial-gradient(ellipse at center, #c0c0c0, #404040);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div#outline4 {
+  background: radial-gradient(ellipse at center, #ffb600 0%, #c0c0c0 10%, #c0c0c0 20%, #c7a44d 35%, #ffb600 100%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+div#tagLine {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: tagLine;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  font-size: 5em;
+  line-height: 1;
+  color: #4c4c4c;
+  text-shadow: -1px 0 cyan, 1px 0 red;
+  -ms-flex-item-align: center;
+      align-self: center;
+  z-index: 1;
+  position: relative;
+}
+
+div#tagLine span:before {
+  content: "";
+}
+
+@media (min-width: 768px) {
+  div#speakers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 20px;
+  }
+  div#speakers:hover #outline2 {
+    -webkit-animation: soundOnOut 2s infinite;
+            animation: soundOnOut 2s infinite;
+  }
+  div#speakers:hover #outline3 {
+    -webkit-animation: soundOn 3s infinite;
+            animation: soundOn 3s infinite;
+  }
+  div#speakers:hover #outline4 {
+    -webkit-animation: soundOnToo 3s infinite;
+            animation: soundOnToo 3s infinite;
+  }
+  div#speakers:hover #tagLine span {
+    -webkit-animation: textInOut 3s infinite;
+            animation: textInOut 3s infinite;
+  }
+  div#speakers:hover #tagLine span:nth-child(2) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  div#speakers:hover #tagLine span:nth-child(3) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  div#speakerA div#outlineA {
+    -webkit-transform: skew(-75deg) translateX(59px);
+            transform: skew(-75deg) translateX(59px);
+  }
+  div#speakerA div#outlineB {
+    -webkit-transform: skew(0, -15deg) translate(215px, 40px);
+            transform: skew(0, -15deg) translate(215px, 40px);
+  }
+  div#speakerB div#outlineA {
+    -webkit-transform: skew(75deg) translateX(-75px);
+            transform: skew(75deg) translateX(-75px);
+  }
+  div#speakerB div#outlineB {
+    -webkit-transform: skew(0, 15deg) translate(-128px, 18px);
+            transform: skew(0, 15deg) translate(-128px, 18px);
+  }
+  div#speakerB div#outline1 {
+    -webkit-transform: translate(-11px);
+            transform: translate(-11px);
+  }
+  div#outlineA {
+    width: 223px;
+    height: 34px;
+  }
+  div#outlineB {
+    width: 118px;
+    height: 261px;
+  }
+  div#outline1 {
+    width: 220px;
+    height: 260px;
+    top: -261px;
+    left: -4px;
+  }
+  div#outline2 {
+    width: 170px;
+    height: 230px;
+  }
+  div#outline3 {
+    width: 150px;
+    height: 150px;
+  }
+  div#tagLine {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,269 @@
+@keyframes soundOn {
+    0%, 100% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+    50% {
+        transform: scale(0.8);
+        transform-origin: center;
+    }
+}
+@keyframes soundOnToo {
+    0%, 100% {
+       transform: scale(1);
+       transform-origin: center;
+    }
+    50% {
+       transform: scale(1.32);
+       transform-origin: center;
+    }
+}
+@keyframes soundOnOut {
+    0%, 100% {
+       transform: scale(1);
+       transform-origin: center;
+    }
+    50% {
+        transform: scale(0.8);
+       transform-origin: center;
+    }
+}
+@keyframes textInOut {
+    0%, 100% {
+        transform: scale(1)translate(0);
+        transform-origin: center;
+    }
+    30% {
+        transform: scale(1.05)translate(0, 10px);
+        transform-origin: center;
+    }
+    70% {
+        transform: scale(1.25)translate(0, -20px);
+        transform-origin: center;
+    }
+}
+
+$list1: #565656, #ececec;
+$list2: #c0c0c0, #404040;
+$list3: #ffb600 0%, #c0c0c0 10%, #c0c0c0 20%, #c7a44d 35%, #ffb600 100%;
+@mixin gradient($direction, $list) { 
+    background: -webkit-linear-gradient($direction, $list);
+    background: -moz-linear-gradient($direction, $list);
+    background: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);  
+}
+@mixin radicalGradient ($list) {
+  background: -moz-radial-gradient(center, ellipse cover, $list);
+  background: -webkit-radial-gradient(center, ellipse cover, $list);
+  background: -o-radial-gradient(center, ellipse cover, $list);
+  background: -ms-radial-gradient(center, ellipse cover, $list);
+  background: radial-gradient(ellipse at center, $list);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 3em auto;
+  font-family: 'Concert One', cursive;
+}
+div#speakers {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  grid-template-rows: auto;
+  grid-row-gap: 15px;
+  grid-template-areas: 
+    "tagLine tagLine" 
+    "speakerA speakerB";
+  #outline2 {
+    animation: soundOnOut 2s infinite;
+  }
+  #outline3 {
+    animation: soundOn 3s infinite;
+  }
+  #outline4 {
+    animation: soundOnToo 3s infinite;
+  }
+  #tagLine {
+    span {
+      animation: textInOut 3s infinite;
+    }
+    span:nth-child(2) {
+      animation-delay: 1s;
+    }
+    span:nth-child(3) {
+      animation-delay: 2s;
+    }
+  }
+}
+
+div#speakerA {
+  grid-area: speakerA;
+  div#outlineA {
+    transform: skew(-75deg) translateX(44px);
+    border-top-right-radius: 15%;
+  }
+  div#outlineB {
+    transform: skew(0, -15deg) translate(147px, 28px);
+    border-top-right-radius: 3%;
+  }
+  div#outline1 {
+    border-right: 1px solid #fafafa;
+  }
+}
+div#speakerB {
+  grid-area: speakerB;
+  justify-self: end;
+  div#outlineA {
+    transform: skew(75deg) translateX(-46px);
+    border-top-left-radius: 15%;
+  }
+  div#outlineB {
+    transform: skew(0, 15deg) translate(-83px, 11px);
+    border-top-left-radius: 3%;
+  }
+  div#outline1 {
+    transform: translate(-2px);
+    border-left: 1px solid #fafafa;
+  }
+}
+div#outlineA {
+  width: 148px;
+  height: 24px;
+  background: #565656;
+}
+
+div#outlineB {
+  width: 82px;
+  height: 160px;
+  @include gradient(top, $list1);
+}
+div#outline1 {
+  width: 148px;
+  height: 160px;
+  top: -160px;
+  // border: 3px solid #a3a3a3;
+  border-top: 1px solid #fafafa;
+  background: #565656;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+div#outline2 {
+  width: 124px;
+  height: 145px;
+  border: 4px solid #c0c0c0;
+  background: #5a5a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+div#outline3 {
+  @include radicalGradient($list2);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#outline4 {
+  @include radicalGradient($list3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+}
+div#tagLine {
+  grid-area: tagLine;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  font-size: 5em;
+  line-height: 1;
+  color: #4c4c4c;
+  text-shadow: -1px 0 cyan, 1px 0 red;
+  align-self: center;
+  z-index: 1;
+  position: relative;
+  span{
+    &:before {
+      content: "";
+    }
+  }
+}
+@media (min-width: 768px) {
+  div#speakers{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    &:hover {
+      #outline2 {
+        animation: soundOnOut 2s infinite;
+      }
+      #outline3 {
+        animation: soundOn 3s infinite;
+      }
+      #outline4 {
+        animation: soundOnToo 3s infinite;
+      }
+      #tagLine {
+        span {
+          animation: textInOut 3s infinite;
+        }
+        span:nth-child(2) {
+          animation-delay: 1s;
+        }
+        span:nth-child(3) {
+          animation-delay: 2s;
+        }
+      }
+    }
+  }
+  div#speakerA{
+    div#outlineA {
+      transform: skew(-75deg) translateX(59px);
+    }
+    div#outlineB {
+      transform: skew(0, -15deg)translate(215px, 40px);
+    }
+  }
+  div#speakerB{
+    div#outlineA {
+      transform: skew(75deg) translateX(-75px);
+    }
+    div#outlineB {
+      transform: skew(0, 15deg) translate(-128px, 18px);
+    }
+    div#outline1 {
+      transform: translate(-11px);
+    }
+  }
+  div#outlineA {
+    width: 223px;
+    height: 34px;
+  }
+  div#outlineB {
+    width: 118px;
+    height: 261px;
+  }
+  div#outline1 {
+    width: 220px;
+    height: 260px;
+    top: -261px;
+    left: -4px;
+  }
+  div#outline2 {
+    width: 170px;
+    height: 230px;
+  }
+  div#outline3 {
+    width: 150px;
+    height: 150px;
+  }
+  div#tagLine {
+    align-self: flex-start;
+  }
+}
