@@ -70,203 +70,203 @@ span:after {
 }
 
 span:nth-child(1n) {
-  color: #a5b378;
+  color: #ad6ad4;
 }
 
 span:nth-child(1n):before, span:nth-child(1n):after {
-  background: #a5b378;
+  background: #ad6ad4;
 }
 
 span:nth-child(2n) {
-  color: #997ae0;
+  color: #b4a26d;
 }
 
 span:nth-child(2n):before, span:nth-child(2n):after {
-  background: #997ae0;
+  background: #b4a26d;
 }
 
 span:nth-child(3n) {
-  color: #989ba1;
+  color: #83b6bb;
 }
 
 span:nth-child(3n):before, span:nth-child(3n):after {
-  background: #989ba1;
+  background: #83b6bb;
 }
 
 span:nth-child(4n) {
-  color: #67a6b0;
+  color: #b2a589;
 }
 
 span:nth-child(4n):before, span:nth-child(4n):after {
-  background: #67a6b0;
+  background: #b2a589;
 }
 
 span:nth-child(5n) {
-  color: #84dfbf;
+  color: #96bea4;
 }
 
 span:nth-child(5n):before, span:nth-child(5n):after {
-  background: #84dfbf;
+  background: #96bea4;
 }
 
 span:nth-child(6n) {
-  color: #86b7d2;
+  color: #d9d2b3;
 }
 
 span:nth-child(6n):before, span:nth-child(6n):after {
-  background: #86b7d2;
+  background: #d9d2b3;
 }
 
 span:nth-child(7n) {
-  color: #6f81a3;
+  color: #82c6af;
 }
 
 span:nth-child(7n):before, span:nth-child(7n):after {
-  background: #6f81a3;
+  background: #82c6af;
 }
 
 span:nth-child(8n) {
-  color: #a9b8d2;
+  color: #d978aa;
 }
 
 span:nth-child(8n):before, span:nth-child(8n):after {
-  background: #a9b8d2;
+  background: #d978aa;
 }
 
 span:nth-child(9n) {
-  color: #9779b2;
+  color: #aa8cad;
 }
 
 span:nth-child(9n):before, span:nth-child(9n):after {
-  background: #9779b2;
+  background: #aa8cad;
 }
 
 span:nth-child(10n) {
-  color: #8fa29c;
+  color: #c39c6c;
 }
 
 span:nth-child(10n):before, span:nth-child(10n):after {
-  background: #8fa29c;
+  background: #c39c6c;
 }
 
 span:nth-child(11n) {
-  color: #94df87;
+  color: #8ac8d1;
 }
 
 span:nth-child(11n):before, span:nth-child(11n):after {
-  background: #94df87;
+  background: #8ac8d1;
 }
 
 span:nth-child(12n) {
-  color: #b8c8d1;
+  color: #9c8aa0;
 }
 
 span:nth-child(12n):before, span:nth-child(12n):after {
-  background: #b8c8d1;
+  background: #9c8aa0;
 }
 
 span:nth-child(13n) {
-  color: #989894;
+  color: #7cdda6;
 }
 
 span:nth-child(13n):before, span:nth-child(13n):after {
-  background: #989894;
+  background: #7cdda6;
 }
 
 span:nth-child(14n) {
-  color: #8adc8c;
+  color: #6ec77e;
 }
 
 span:nth-child(14n):before, span:nth-child(14n):after {
-  background: #8adc8c;
+  background: #6ec77e;
 }
 
 span:nth-child(15n) {
-  color: #917d8a;
+  color: #cc89aa;
 }
 
 span:nth-child(15n):before, span:nth-child(15n):after {
-  background: #917d8a;
+  background: #cc89aa;
 }
 
 span:nth-child(16n) {
-  color: #b7a8bb;
+  color: #7b7b8f;
 }
 
 span:nth-child(16n):before, span:nth-child(16n):after {
-  background: #b7a8bb;
+  background: #7b7b8f;
 }
 
 span:nth-child(17n) {
-  color: #d2d38d;
+  color: #8e84a8;
 }
 
 span:nth-child(17n):before, span:nth-child(17n):after {
-  background: #d2d38d;
+  background: #8e84a8;
 }
 
 span:nth-child(18n) {
-  color: #9c898d;
+  color: #e19473;
 }
 
 span:nth-child(18n):before, span:nth-child(18n):after {
-  background: #9c898d;
+  background: #e19473;
 }
 
 span:nth-child(19n) {
-  color: #79b07c;
+  color: #7a70d2;
 }
 
 span:nth-child(19n):before, span:nth-child(19n):after {
-  background: #79b07c;
+  background: #7a70d2;
 }
 
 span:nth-child(20n) {
-  color: #beaa9d;
+  color: #be9099;
 }
 
 span:nth-child(20n):before, span:nth-child(20n):after {
-  background: #beaa9d;
+  background: #be9099;
 }
 
 span:nth-child(21n) {
-  color: #c8be76;
+  color: #b783ce;
 }
 
 span:nth-child(21n):before, span:nth-child(21n):after {
-  background: #c8be76;
+  background: #b783ce;
 }
 
 span:nth-child(22n) {
-  color: #afcc99;
+  color: #907887;
 }
 
 span:nth-child(22n):before, span:nth-child(22n):after {
-  background: #afcc99;
+  background: #907887;
 }
 
 span:nth-child(23n) {
-  color: #8f7fb8;
+  color: #a67ab5;
 }
 
 span:nth-child(23n):before, span:nth-child(23n):after {
-  background: #8f7fb8;
+  background: #a67ab5;
 }
 
 span:nth-child(24n) {
-  color: #796578;
+  color: #6ecf93;
 }
 
 span:nth-child(24n):before, span:nth-child(24n):after {
-  background: #796578;
+  background: #6ecf93;
 }
 
 span:nth-child(25n) {
-  color: #aed986;
+  color: #a7dbdc;
 }
 
 span:nth-child(25n):before, span:nth-child(25n):after {
-  background: #aed986;
+  background: #a7dbdc;
 }
 
 span:hover:before, span:hover:after {
