@@ -1,0 +1,167 @@
+body{
+  background-color: #35344E;
+  padding: 0;
+  margin: 0;
+}
+.container{
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+.branch{
+  background-color: #FC7753;
+  height: 15px;
+  width: 350px;
+  border-radius: 0 15px 15px 0;
+  position: absolute;
+  top:260px;
+  z-index: 1;
+}
+.branch>div{
+  background-color: #FC7753;
+  height: 8px;
+  width: 50px;
+  position: relative;
+  transform:rotate(-30deg);
+  -webkit-transform:rotate(-30deg);
+  border-radius: 8px;
+  bottom: 10px;
+  left:250px; 
+}
+.owl{
+  position: relative;
+  background-color: #CFAE69;
+  height: 160px;
+  width: 120px;
+  border-radius: 120px;
+  top:125px;
+  left:100px;
+  
+}
+.ear-l,.ear-r{
+  height: 0;
+  width: 0;
+  border-bottom: 33px solid #A6813B;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: relative;
+  z-index: -2;
+}
+.ear-l{
+  bottom: 10px;
+  left:3px;
+  transform: rotate(-20deg);		
+  -webkit-transform: rotate(-20deg);			
+}
+.ear-r{
+  bottom: 42px;
+  left: 88px;
+  transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+}
+.eye-l,.eye-r{
+  height: 41px;
+  width: 41px;
+  background-color: #A6813B;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.eye-l:before,.eye-r:before{
+  content: '';
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  left:4.5px;
+  top:4.5px;
+  background-color: white;
+}
+.eye-l{
+  bottom: 190px;
+  left:12px;
+}
+.eye-r{
+  bottom: 230px;
+  left:67px;
+}
+.eyeball{
+  height: 15px;
+  width: 15px;
+  background-color: #424142;
+  border-radius: 50%;
+  position: absolute;
+  top:13px;
+  left:13px;
+}
+.eyelid{
+  height: 50px;
+  width: 50px;
+  background-color: #A6813B;
+  position: relative;
+  bottom: 30px;
+  right: 10px;
+  animation: blink 2s infinite;	
+  -webkit-animation: blink 2s infinite;	
+}
+@keyframes blink{
+  30%{
+    transform:translateY(18px);
+  }
+
+}
+@-webkit-keyframes blink{
+  30%{
+    -webkit-transform:translateY(18px);
+  }
+
+}
+.wing-l,.wing-r{
+  height: 80px;
+  width: 20px;
+  background-color: #A6813B;
+  position: relative;
+  z-index: 2;
+  }
+.wing-l{
+  right:8px;
+  top:4px;
+  border-radius: 20px 0;
+}
+.wing-r{
+  border-radius:0 20px;
+  bottom: 76px;
+  left:108px;
+}
+.beak{
+  width: 0;
+     height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 20px solid #FFCC30;
+      border-radius: 50%;
+      position: relative;
+      bottom: 240px;
+      left:47.5px;
+}
+.leg-r,.leg-l{
+  background-color: #FFCC30;
+  height: 9px;
+  width:20px;
+  border-radius:8px; 
+  position: relative;
+  z-index: 2;
+}
+.leg-l{
+  bottom: 197px;
+  left:25px;
+}
+.leg-r{
+  bottom: 206px;
+  left:75px;
+}
