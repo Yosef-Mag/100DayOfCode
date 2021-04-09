@@ -1,0 +1,319 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #333;
+}
+
+.fire {
+  width: 10vw;
+  height: 10vw;
+  margin: auto;
+  position: relative;
+}
+
+.fire__flame {
+  position: absolute;
+  width: 4vw;
+  height: 10vw;
+  background-color: #D92B29;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 79% 21% 64% 36%/43% 61% 39% 57%;
+  z-index: 0;
+  -webkit-animation-name: fire;
+          animation-name: fire;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
+.fire__flame:nth-of-type(2) {
+  width: 4vw;
+  height: 8vw;
+  border-radius: 23% 77% 66% 34%/57% 72% 28% 43%;
+  background-color: #F5732A;
+  -webkit-transform: translate(1.5vw, 0.8vw) rotate(30deg);
+          transform: translate(1.5vw, 0.8vw) rotate(30deg);
+  opacity: 0.9;
+  z-index: 2;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.fire__flame:nth-of-type(3) {
+  width: 4vw;
+  height: 9vw;
+  border-radius: 78% 22% 63% 37%/39% 27% 73% 61%;
+  background-color: #F2B338;
+  -webkit-transform: translate(-1.5vw, 0.8vw) rotate(-30deg);
+          transform: translate(-1.5vw, 0.8vw) rotate(-30deg);
+  opacity: 0.8;
+  z-index: 1;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.fire__flame:nth-of-type(4) {
+  width: 4vw;
+  height: 7vw;
+  border-radius: 35% 65% 78% 22%/54% 50% 50% 46%;
+  background-color: #F5D549;
+  opacity: 0.8;
+  z-index: 1;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.fire__stick {
+  border-radius: 1vw;
+  width: 2vw;
+  height: 9vw;
+  background-color: #5a3600;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -5vw;
+  z-index: 2;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+.fire__stick:last-of-type {
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+  background-color: #4e2f01;
+}
+
+.stars__star {
+  -webkit-animation-name: star;
+          animation-name: star;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+  position: absolute;
+  width: 0.4vw;
+  height: 0.4vw;
+  background-color: #fff;
+  border-radius: 100%;
+  top: 1vw;
+  left: 5vw;
+  opacity: 0.7;
+}
+
+.stars__star:nth-of-type(2) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  width: 0.2vw;
+  height: 0.2vw;
+  top: 4vw;
+  left: 20vw;
+}
+
+.stars__star:nth-of-type(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  width: 0.3vw;
+  height: 0.3vw;
+  top: 1vw;
+  left: 90vw;
+}
+
+.stars__star:nth-of-type(4) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  top: 4vw;
+  left: 70vw;
+}
+
+.stars__star:nth-of-type(5) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  top: 7vw;
+  left: 30vw;
+}
+
+.stars__star:nth-of-type(6) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  width: 0.1vw;
+  height: 0.1vw;
+  top: 1vw;
+  left: 40vw;
+}
+
+.stars__star:nth-of-type(7) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  width: 0.2vw;
+  height: 0.2vw;
+  top: 6vw;
+  left: 55vw;
+}
+
+.stars__star:nth-of-type(8) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  width: 0.3vw;
+  height: 0.3vw;
+  top: 3vw;
+  left: 60vw;
+}
+
+.stars__star:nth-of-type(9) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  width: 0.2vw;
+  height: 0.2vw;
+  top: 3vw;
+  left: 2vw;
+}
+
+.stars__star:nth-of-type(9) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  top: 3vw;
+  left: 43vw;
+}
+
+.stars__star:nth-of-type(10) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  width: 0.2vw;
+  height: 0.2vw;
+  top: 5vw;
+  left: 80vw;
+}
+
+.stars__star:nth-of-type(11) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  width: 0.2vw;
+  height: 0.2vw;
+  top: 11vw;
+  left: 10vw;
+}
+
+.stars__star:nth-of-type(12) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  top: 12vw;
+  left: 25vw;
+}
+
+.stars__star:nth-of-type(13) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  width: 0.2vw;
+  height: 0.2vw;
+  top: 11vw;
+  left: 38vw;
+}
+
+.stars__star:nth-of-type(14) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  width: 0.1vw;
+  height: 0.1vw;
+  top: 11vw;
+  left: 55vw;
+}
+
+.stars__star:nth-of-type(15) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  top: 14vw;
+  left: 72vw;
+}
+
+.stars__star:nth-of-type(15) {
+  top: 11vw;
+  left: 92vw;
+}
+
+.container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+}
+
+@-webkit-keyframes fire {
+  0% {
+    border-radius: 79% 21% 64% 36%/43% 61% 39% 57%;
+    background-color: #D92B29;
+  }
+  25% {
+    border-radius: 23% 77% 66% 34%/57% 72% 28% 43%;
+    background-color: #F5732A;
+  }
+  50% {
+    border-radius: 78% 22% 63% 37%/39% 27% 73% 61%;
+    background-color: #F2B338;
+  }
+  75% {
+    border-radius: 35% 65% 78% 22%/54% 50% 50% 46%;
+    background-color: #F5D549;
+  }
+  100% {
+    border-radius: 79% 21% 64% 36%/43% 61% 39% 57%;
+    background-color: #D92B29;
+  }
+}
+
+@keyframes fire {
+  0% {
+    border-radius: 79% 21% 64% 36%/43% 61% 39% 57%;
+    background-color: #D92B29;
+  }
+  25% {
+    border-radius: 23% 77% 66% 34%/57% 72% 28% 43%;
+    background-color: #F5732A;
+  }
+  50% {
+    border-radius: 78% 22% 63% 37%/39% 27% 73% 61%;
+    background-color: #F2B338;
+  }
+  75% {
+    border-radius: 35% 65% 78% 22%/54% 50% 50% 46%;
+    background-color: #F5D549;
+  }
+  100% {
+    border-radius: 79% 21% 64% 36%/43% 61% 39% 57%;
+    background-color: #D92B29;
+  }
+}
+
+@-webkit-keyframes star {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #aff4ff;
+  }
+}
+
+@keyframes star {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #aff4ff;
+  }
+}
+/*# sourceMappingURL=style.css.map */
